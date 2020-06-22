@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <title>Spring Boot Homework</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hi There!!!</h1>
+      <h3>Sign in to view images.</h3>
+      <form
+        action="#"
+        th:action="@{/greeting}"
+        th:object="${greeting}"
+        method="post"
+      >
+        <label>Name goes here:</label>
+        <input type="text" th:field="*{name}" /><br />
+        <p>
+          <input class="button" type="submit" value="Submit" /> <br />
+          <input class="button" type="reset" value="Reset" />
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
